@@ -1,3 +1,26 @@
+====================================================================
+Python 3.x specific notes
+===================================================================
+
+In Python 2.x, you could import PIL with three different methods :
+
+ 1. import Image
+ 2. import PIL.Image
+ 3. from PIL import Image
+
+Unfortunately, because of changes to Python 3 regarding relative
+import, the latter two doesn’t work anymore (symptoms: you get a
+"cannot identify image file" error when you try to open a file).
+
+It is possible to fix it, but then the first method will be broken.
+Since the first method seems to be the upstream preferred one
+(selftests.py and tutorial on the official website use it) I will
+stick to the first one. If you prefer the two other methods, you
+can use the smarnach repository :
+
+  https://github.com/smarnach/pil-py3k/
+
+
 The Python Imaging Library
 $Id: README 2939 2006-12-03 13:43:51Z fredrik $
 
