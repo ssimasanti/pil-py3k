@@ -119,6 +119,7 @@ class pil_build_ext(build_ext):
         include_dirs = []
 
         add_directory(include_dirs, "libImaging")
+        add_directory(library_dirs, "/usr/lib/x86_64-linux-gnu")
 
         #
         # add platform directories
